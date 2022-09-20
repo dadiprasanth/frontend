@@ -1,9 +1,27 @@
-import logo from './logo.svg';
+
+import Header from './components/header';
 import './App.css';
+import MainForm from './components/addproperty/mainForm';
+import Sidebar from "./components/sidebar"
 
 function App() {
+  
   return (
-    <>hiiii this is prasanth</>
+    <>
+    {/* <div class="main">
+      <div>
+        // <Sidebar/>
+      </div>
+    
+      <div>
+        <Header/>
+        <MainForm/>
+      </div>
+    </div> */}
+    {/* <MainForm/> */}
+    <Sidebar/>
+    <Header/>
+    </>
   );
 }
 

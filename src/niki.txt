@@ -1,0 +1,11 @@
+[register]----->[login]----->[side,header,body]----->[side,header,form]
+
+
+------------>container
+------------>div <side/>
+------------> div header body
+<app/>
+------------->register routerpath("/")===>register
+------------->login routerpath("/login")
+-------------->property routerpath("/property")=====>property(reutn(<side/>,<header/>,<tablebody/>))
+-------------->newpropert routerpath("property/addnew")====>newpropert(return(<side/>,<header/>,<form/>))

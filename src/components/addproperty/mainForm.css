@@ -1,0 +1,109 @@
+/*------------------------------side bar css------------------------------- */
+.sidebar{
+    width:200px;
+    border:1px solid #ccc;
+    height:100vh;
+    position:fixed;
+    background-color: #E1F9F4;
+    
+  
+    
+  }
+  .sidebar h2{
+    text-align:center
+  }
+  #sidebarlist{
+    list-style-type: none;
+    color:#AAAAAA;
+  }
+  #sidebarlist li{
+    margin:20px 0px;
+  }
+  #sidebarlist li .fa-solid{
+    margin-right:10px
+  }
+  /*---------------------------header css  -----------------------*/
+  header{
+    display:flex;
+    border:1px solid #ccc;
+    justify-content: space-between;
+    padding:20px;
+    color:#AAAAAA;
+    font-family: 'Source Sans Pro';
+  }
+  /*-------------------------------------------------*/
+  .main{
+    display:flex;
+  }
+  /* .forms{
+    margin:40px;
+    margin-left: 25vw;
+    margin-top: 30vh;
+    border:1px solid #ccc;
+  } */
+  .forms{
+    
+    display: grid;
+    /* justify-content: center; */
+    justify-items: center;
+    background: #F5F5F5;
+    width:650px;
+    box-sizing: border-box;
+    margin: auto;
+  }
+  .body{
+    height:80vh;
+    
+  }
+  form{
+    
+    display:grid;
+    grid-template-columns: 300px 300px ;
+    padding:20px;
+    justify-items: center;
+    justify-content:center;
+    /* font-family: Source Sans Pro; */
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+  
+    
+    
+    
+  }
+  form div input{
+    width:250px;
+  
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  
+  }
+  
+    
+    form div label{
+      font-weight: 500;
+      font-size: small;
+    }
+    /*----------------------------button---------------*/
+    button{
+      width:200px;
+      border-radius:10px;
+      border:1px;
+      height:30px;
+      box-shadow: 5px 10px 18px #888888;
+      margin:10px;
+      color:#E1F9F4;
+    }
+    #bt1{
+      background-color: #6AB4F8;
+    
+    }
+    #bt2{
+      background: #4C57B6;
+    
+    }
+    
