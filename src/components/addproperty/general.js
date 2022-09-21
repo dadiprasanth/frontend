@@ -16,6 +16,7 @@ const General=(props)=>{
             <div>
             <label >Sale Type</label><br></br>
             <select name="Sale Type" placeholder="Please Select " value={props.form.saleType} onChange={(e)=>props.setform({...props.form,saleType:e.target.value})}>
+            <option value="" disabled selected>Please Select </option>
             <option value="rent">Rent</option>
             <option value="sale">Sale</option>
 
@@ -24,6 +25,7 @@ const General=(props)=>{
             <div>
             <label >Featured Package</label><br></br>
             <select name="Featured Package" placeholder="Please Select " value={props.form.featuredPackage} onChange={(e)=>props.setform({...props.form,featuredPackage:e.target.value})}>
+            <option value="" disabled selected>Please Select </option>
             <option value="free">Free</option>
             <option value="paid">Paid</option>
             
@@ -32,8 +34,9 @@ const General=(props)=>{
             <div>
             <label >PPD Package</label><br></br>
             <select type="text" placeholder="Please Select" value={props.form.ppdPackage} onChange={(e)=>props.setform({...props.form,ppdPackage:e.target.value})}>
-           <option value="Yes">YES</option>
-           <option value="No">NO</option>
+            <option value="" disabled selected>Please Select </option>
+            <option value="Yes">YES</option>
+            <option value="No">NO</option>
 
             </select>
             </div>
