@@ -23,7 +23,7 @@ const Login=()=>{
     const handleSubmit=(e)=>{
         e.preventDefault()
         console.log(input)
-       nav("/")
+       nav("/property")
     }
     return(
         <>
@@ -34,7 +34,16 @@ const Login=()=>{
             </div>
             <form className="login-data" onSubmit={handleSubmit} >
           
+
                 <input className="userdata"  name="userid"  required  placeholder="User ID" onChange={(e)=>{setInput({...input,userid:e.target.value})}} />
+
+                <input className="userdata"  name="userid"
+                  type={"email"}
+                required
+                placeholder="User ID"
+                onChange={(e)=>{setInput({...input,userid:e.target.value})}}
+                />
+
 
 
            <input  required  placeholder="Password" onChange={(e)=>{setInput({...input,password:e.target.value})}}           />
