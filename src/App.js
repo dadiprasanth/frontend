@@ -1,8 +1,8 @@
-
+import {BrowserRouter, Route,Routes} from 'react-router-dom'
 import Header from './components/header';
 import './App.css';
-import MainForm from './components/addproperty/mainForm';
-import Sidebar from "./components/sidebar"
+import Search from './components/home/search';
+import Sidebar from "./components/sidebar";
 
 function App() {
   
@@ -19,8 +19,13 @@ function App() {
       </div>
     </div> */}
     {/* <MainForm/> */}
-    <Sidebar/>
-    <Header/>
+
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Search/>} />
+        <Route path="/addnew" element={<Sidebar/>} />
+      </Routes>
+    </BrowserRouter>
     </>
   );
 }
