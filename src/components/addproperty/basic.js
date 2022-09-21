@@ -1,5 +1,7 @@
 const Basic=(props)=>{
     return(
+        <>
+     
         <form>
             <div>
             <label >Proprty Type</label><br></br>
@@ -36,6 +38,7 @@ const Basic=(props)=>{
             
                     
         </form>
+        </>
     )
 }
 export default Basic;

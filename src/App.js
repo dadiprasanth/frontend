@@ -1,26 +1,14 @@
 
-import Header from './components/header';
+import Addproperty from './components/addproperty/addproperty';
 import './App.css';
-import MainForm from './components/addproperty/mainForm';
-import Sidebar from "./components/sidebar"
+
 
 function App() {
   
   return (
-    <>
-    {/* <div class="main">
-      <div>
-        // <Sidebar/>
-      </div>
-    
-      <div>
-        <Header/>
-        <MainForm/>
-      </div>
-    </div> */}
-    {/* <MainForm/> */}
-    <Sidebar/>
-    <Header/>
+     <>
+     {/* //place your routing elements here  u can see if i add routoing here i will give this part*/}
+    <Addproperty/>
     </>
   );
 }

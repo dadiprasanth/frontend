@@ -65,7 +65,16 @@ function MainForm() {
     }
   }
   return(
-    <><div style={{weidth:"500px"}} className="forms">
+    <div className="bigcontainer"><div>Add New Property</div>
+      <div id={"hi"+count}className="strip">
+        <div id="zero"><div>1</div> Basic</div>
+        <div id="one"><div>2</div>Property Details</div>
+        <div id="two"><div>3</div>General info</div>
+        <div id="three"><div>4</div>Location info</div>
+        </div>
+    <div style={{weidth:"500px"}} className="forms">
+     
+      <div>
       <div className='body'>{pagedisplay()}</div>
       <div className='bottom'>
         <button id="bt1"onClick={()=>{
@@ -86,8 +95,9 @@ function MainForm() {
 
         }}>{count==3?"Add Property":"Save&Continue"}</button>
       </div>
+      </div>
     </div>
-    </>
+    </div>
   )
 }
 
