@@ -9,7 +9,7 @@ function MainForm() {
   const[count,setcount]=useState(0)
   const[form,setform]=useState({
     propertyType:"",
-    negotable:"",
+    negotiable:"",
     price:"",
     ownerShip:"",
     propertyAge:"",
@@ -65,7 +65,7 @@ function MainForm() {
     }
   }
   return(
-    <div className="bigcontainer"><div>Add New Property</div>
+    <div id="bigcon" className="bigcontainer"><div>Add New Property</div>
       <div id={"hi"+count}className="strip">
         <div id="zero"><div>1</div> Basic</div>
         <div id="one"><div>2</div>Property Details</div>

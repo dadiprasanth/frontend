@@ -1,6 +1,6 @@
 const Location=(props)=>{
     return(
-        <form>
+        <form className="form-addprop">
         <div>
         <label >Email</label><br></br>
         <input type="email" placeholder="Email" value={props.form.email} onChange={(e)=>props.setform({...props.form,email:e.target.value})}/>
