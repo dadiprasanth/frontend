@@ -1,0 +1,27 @@
+.bigcontainer{
+    margin-top:5px;
+    padding: 30px;
+    background-color: #F5F5F5;
+}
+.bigcontainer div{
+    
+ 
+    
+}
+.property{
+    display:flex;
+
+    
+}
+.child1{
+    width:20%;
+}
+.child2{
+    width:80%;
+   
+    background: #E1F9F4;
+    
+
+    
+    
+}
