@@ -23,7 +23,7 @@ const Login=()=>{
     const handleSubmit=(e)=>{
         e.preventDefault()
         console.log(input)
-       nav("/")
+       nav("/property")
     }
     return(
         <>
