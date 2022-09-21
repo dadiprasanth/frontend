@@ -19,31 +19,63 @@ const Property=(props)=>{
         </div>
         <div>
         <label >No of BHK</label><br></br>
-        <input type="text" placeholder="Select No of BHK " value={props.form.noOfBhk} onChange={(e)=>props.setform({...props.form,noOfBhk:e.target.value})}/>
+        <select name="No of BHK" placeholder="Select No of BHK " value={props.form.noOfBhk} onChange={(e)=>props.setform({...props.form,noOfBhk:e.target.value})}>
+        <option value="1bhk">1BHk</option>
+        <option value="2bhk">2BHk</option>
+
+        <option value="3bhk">3BHk</option>
+        <option value="morethan">Morethan</option>
+
+        </select>
         </div>
         <div>
         <label >No of floor</label><br></br>
-        <input type="text" placeholder="Select No of Floor" value={props.form.noOfFloor} onChange={(e)=>props.setform({...props.form,noOfFloor:e.target.value})}/>
+        <select name="No of floor" placeholder="Select No of Floor" value={props.form.noOfFloor} onChange={(e)=>props.setform({...props.form,noOfFloor:e.target.value})}>
+       <option value="1">1</option>
+       <option value="2">2</option>
+       <option value="3">3</option>
+       <option value="morethan">More than</option>
+
+
+       </select>
+       
         </div>
         <div>
         <label >Attached</label><br></br>
-        <input type="text" placeholder="Select Attached" value={props.form.attached} onChange={(e)=>props.setform({...props.form,attached:e.target.value})}/>
+        <select name="Attached" placeholder="Select Attached" value={props.form.attached} onChange={(e)=>props.setform({...props.form,attached:e.target.value})}>
+        <option value="Yes">YES</option>
+        <option value="No">NO</option>
+
+        </select>
         </div>
         <div>
         <label >Western Toilet</label><br></br>
-        <input type="text" placeholder="select Western Toilet" value={props.form.westernToilet} onChange={(e)=>props.setform({...props.form,westernToilet:e.target.value})}/>
+        <select name="Western Toilet" placeholder="select Western Toilet" value={props.form.westernToilet} onChange={(e)=>props.setform({...props.form,westernToilet:e.target.value})}>
+        <option value="Yes">YES</option>
+        <option value="No">NO</option>
+        
+        </select>
         </div>
         <div>
         <label >Furnished</label><br></br>
-        <input type="text" placeholder="Select Furnished " value={props.form.furnished} onChange={(e)=>props.setform({...props.form,furnished:e.target.value})}/>
+        <select name="Furnished" placeholder="Select Furnished " value={props.form.furnished} onChange={(e)=>props.setform({...props.form,furnished:e.target.value})}>
+        <option value="Yes">YES</option>
+        <option value="No">NO</option>
+       </select>
         </div>
         <div>
         <label >Car Parking</label><br></br>
-        <input type="text" placeholder="Select Car Parking " value={props.form.carParking} onChange={(e)=>props.setform({...props.form,carParking:e.target.value})}/>
+        <select name="Car Parking" placeholder="Select Car Parking " value={props.form.carParking} onChange={(e)=>props.setform({...props.form,carParking:e.target.value})}>
+        <option value="Yes">YES</option>
+        <option value="No">NO</option>
+        </select>
         </div>
         <div>
         <label >Lift</label><br></br>
-        <input type="text" placeholder="Select Lift" value={props.form.lift} onChange={(e)=>props.setform({...props.form,lift:e.target.value})}/>
+        <select name="Lift" placeholder="Select Lift" value={props.form.lift} onChange={(e)=>props.setform({...props.form,lift:e.target.value})}>
+        <option value="Yes">YES</option>
+        <option value="No">NO</option>
+</select>
         </div>
         <div>
         <label >Electricity</label><br></br>
@@ -51,7 +83,13 @@ const Property=(props)=>{
         </div>
         <div>
         <label >Facing</label><br></br>
-        <input type="text" placeholder="select Facing" value={props.form.facing} onChange={(e)=>props.setform({...props.form,facing:e.target.value})}/>
+        <select  name="Facing" placeholder="select Facing" value={props.form.facing} onChange={(e)=>props.setform({...props.form,facing:e.target.value})}>
+        <option value="north">North</option>
+        <option value="south">South</option>
+        <option value="west">West</option>
+        <option value="east">East</option>
+
+        </select>
         </div>
         
         
@@ -61,3 +99,4 @@ const Property=(props)=>{
 
 }
 export default Property;
+
