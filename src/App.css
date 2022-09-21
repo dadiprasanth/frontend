@@ -2,12 +2,12 @@
     margin-top:5px;
     padding: 30px;
     background-color: #F5F5F5;
-}
-.bigcontainer div{
-    
- 
     
 }
+#bigcon{
+    color:#ccc
+}
+
 .property{
     display:flex;
 

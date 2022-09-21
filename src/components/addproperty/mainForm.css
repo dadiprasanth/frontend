@@ -1,8 +1,8 @@
 /*------------------------------side bar css------------------------------- */
 .sidebar{
     
-    border:1px solid #ccc;
-    height:100vh;
+    border:1px solid #E1F9F4;
+    height:99vh;
     
     background-color: #E1F9F4;
     
@@ -19,6 +19,9 @@
   #sidebarlist li{
     margin:20px 0px;
   }
+  #sidebarlist li:first-child{
+    color:#4C57B6;
+  }
   #sidebarlist li .fa-solid{
     margin-right:10px
   }
@@ -26,8 +29,9 @@
   header{
     display:flex;
     
-    border:1px solid #ccc;
-    background: #F5F5F5;
+    border:1px solid #E1F9F4;
+    border-radius: 5px;
+    background: #f5f5f5;
     justify-content: space-between;
     padding:20px;
     color:#AAAAAA;
@@ -41,7 +45,7 @@
     border-radius: 20px;
     border:1px ;
     justify-content: center;
-    margin: 20px auto;
+    margin: 15px auto;
     box-shadow: 5px 5px 18px #888888;
   }
   .strip div{
@@ -59,6 +63,7 @@
     background-color: aquamarine;
     justify-content: center;
     align-items: center;
+    margin-left: 5px;
   }
   #hi0 #zero{
     background-color:  #6AB4F8;
@@ -66,11 +71,19 @@
     color:#E1F9F4;
     box-shadow: 5px 5px 18px #888888;
   }
+  #hi0 #zero div{
+    background-color: white;
+    color:black;
+  }
   #hi1 #one{
     background-color:  #6AB4F8;
     border-radius: 20px;
     color:#E1F9F4;
     box-shadow: 5px 5px 18px #888888;
+  }
+  #hi1 #one div{
+    background-color: white;
+    color:black;
   }
   #hi2 #two{
     background-color:  #6AB4F8;
@@ -78,11 +91,19 @@
     color:#E1F9F4;
     box-shadow: 5px 5px 18px #888888;
   }
+  #hi2 #two div{
+    background-color: white;
+    color:black;
+  }
   #hi3 #three{
     background-color:  #6AB4F8;
     border-radius: 20px;
     color:#E1F9F4;
     box-shadow: 5px 5px 18px #888888;
+  }
+  #hi3 #three div{
+    background-color: white;
+    color:black;
   }
   /*------------------------form-------------------------*/
   .forms{
@@ -111,6 +132,8 @@
   }
   .body{
     height:50vh;
+    overflow: scroll;
+    overflow-x: hidden; 
     
     
   }
