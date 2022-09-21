@@ -1,11 +1,12 @@
 import "./mainForm.css"
 import { useState } from 'react';
-
+import { useNavigate } from "react-router-dom";
 import General from './general';
 import Property from './property';
 import Location from './location';
 import Basic from './basic';
 function MainForm() {
+  const nav=useNavigate()
   const[count,setcount]=useState(0)
   const[form,setform]=useState({
     propertyType:"",
@@ -44,7 +45,7 @@ function MainForm() {
     latitude:"",
     longitude:""
   })
-  const headers=["basicinfo","personaldetails","generaldetail","Locationdetails"]
+  
   const pagedisplay=()=>{
     if(count==0){
       return(
@@ -64,6 +65,17 @@ function MainForm() {
       )
     }
   }
+  const postfun=()=>{
+    fetch("http://localhost:8080/property/add",{
+      method:"POST",
+      body:JSON.stringify(form),
+      headers:{
+        "Accept":"application/json",
+        "Content-Type":"application/json"
+      }
+    }).then(x=>x.json()).then(data=>alert(data.message))
+    nav("/property")
+  }
   return(
     <div id="bigcon" className="bigcontainer"><div>Add New Property</div>
       <div id={"hi"+count}className="strip">
@@ -79,16 +91,17 @@ function MainForm() {
       <div className='bottom'>
         <button id="bt1"onClick={()=>{
           if(count==0){
-            console.log(form)
-            alert("cancel event")
+            
+            alert("i am not willing to add")
+            nav("/property")
           }
           else{
             setcount(count-1)}
           }}>{count==0?"Cancel":"Previous"}</button>
         <button id="bt2" onClick={()=>{
             if(count==3){
-              console.log(form)
-              alert("form submittes")
+              postfun()
+              
             }
             else{
               setcount(count+1)}
