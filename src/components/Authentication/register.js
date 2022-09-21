@@ -39,8 +39,8 @@ if(form.password===password){
     return(
         <>
          <div className="register-form">
-            <div className="header">
-          <p className="logo">Logo</p>
+            <div className="register-header">
+            <div className="login-logo"><i class="fa-solid fa-city"></i></div>
           <p className="text">Create New Account</p>
           </div>
 

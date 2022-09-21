@@ -6,17 +6,15 @@ body{
 .register-form{
     text-align: center;
     width:40vw;
-    margin-top: 10vh;
+    margin-top: 50px;
     margin-bottom: auto;
     margin-right: auto;
     margin-left: auto;
-background-color: #ffff;
+    background-color: #ffff;
+    border-radius: 20px;
 }
-.logo{
-    padding-top: 70px;
-    font-weight: 400;
-    font-size: 40px;
-    color:#4C57B6;
+.register-header{
+    padding:20px;
 }
 .text{
 color:

@@ -29,30 +29,18 @@ const Login=()=>{
         <>
         <div className="login-form">
             <div>
-                <p className="logo">Logo</p>
-                <p className="text">Enter your credentials to access your account</p></div>
-                <form className="login-data"
-                onSubmit={handleSubmit}
-                 >
+                <div className="login-logo"><i class="fa-solid fa-city"></i></div>
+                <p className="text">Enter your credentials to access your account</p>
+            </div>
+            <form className="login-data" onSubmit={handleSubmit} >
           
-                <input className="userdata"  name="userid"
-                //    type={"email"}
-                required
-                placeholder="User ID"
-                onChange={(e)=>{setInput({...input,userid:e.target.value})}}
-                />
+                <input className="userdata"  name="userid"  required  placeholder="User ID" onChange={(e)=>{setInput({...input,userid:e.target.value})}} />
 
 
-           <input 
-           required
-        //    type={type}
-           placeholder="Password"
-           onChange={(e)=>{setInput({...input,password:e.target.value})}}
-
-           />
+           <input  required  placeholder="Password" onChange={(e)=>{setInput({...input,password:e.target.value})}}           />
 
 
-<button type="sumbit">Sign In</button>
+            <button type="sumbit">Sign In</button>
 
           </form>
          
