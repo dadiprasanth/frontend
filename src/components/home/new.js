@@ -63,6 +63,32 @@ const data = [
         views:"3554",
         status:"unsold",
         days:"4"
+    },{
+        PPDID:"jo5353",
+        propertyType:"ewrtghy",
+        mobile: "45795135",
+        toatalArea:"545454",
+        views:"3554",
+        status:"unsold",
+        days:"4"
+    },
+    {
+        PPDID:"jo4357",
+        propertyType:"ewrtghy",
+        mobile: "45795135",
+        toatalArea:"545454",
+        views:"3554",
+        status:"unsold",
+        days:"4"
+    },
+    {
+        PPDID:"jo4353",
+        propertyType:"ewrtghy",
+        mobile: "45795135",
+        toatalArea:"545454",
+        views:"3554",
+        status:"unsold",
+        days:"4"
     }
 
 ]
