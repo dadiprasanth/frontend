@@ -36,7 +36,7 @@ const Login=()=>{
                  >
           
                 <input className="userdata"  name="userid"
-                //    type={"email"}
+                  type={"email"}
                 required
                 placeholder="User ID"
                 onChange={(e)=>{setInput({...input,userid:e.target.value})}}
