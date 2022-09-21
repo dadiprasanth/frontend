@@ -1,6 +1,6 @@
 const Property=(props)=>{
     return(
-        <form>
+        <form className="form-addprop">
         <div>
         <label >Length</label><br></br>
         <input type="text" placeholder="Example: 10000" value={props.form.length} onChange={(e)=>props.setform({...props.form,length:e.target.value})}/>

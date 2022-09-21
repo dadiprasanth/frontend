@@ -2,7 +2,7 @@ const Basic=(props)=>{
     return(
         <>
      
-        <form>
+        <form className="form-addprop">
             <div>
             <label >Proprty Type</label><br></br>
             <input type="text" placeholder="Select Proprty Type" value={props.form.propertyType} onChange={(e)=>props.setform({...props.form,propertyType:e.target.value})}/>

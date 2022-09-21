@@ -1,4 +1,4 @@
-/*------------------------------side bar css------------------------------- */
+------------------------------side bar css-------------------------------
 .sidebar{
     
     border:1px solid #E1F9F4;
@@ -137,25 +137,21 @@
     
     
   }
-  form{
+  .form-addprop{
     
     display:grid;
     grid-template-columns: 400px 400px ;
     padding:20px;
     justify-items: center;
     justify-content:center;
-    /* font-family: Source Sans Pro; */
+    
     font-size: 20px;
     font-weight: 600;
     line-height: 25px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: left;   
     
-  
-    
-    
-    
-  }
+  } 
   form div input{
     width:350px;
   
@@ -171,7 +167,7 @@
       font-size: small;
     }
     /*----------------------------button---------------*/
-    button{
+    .bottom button{
       width:200px;
       border-radius:10px;
       border:1px;

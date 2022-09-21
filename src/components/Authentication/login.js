@@ -29,20 +29,18 @@ const Login=()=>{
         <>
         <div className="login-form">
             <div>
-          <p className="logo">Logo</p>
-          <p className="text">Enter your credentials to access your account</p></div>
-          <form className="login-data"
-          onSubmit={handleSubmit}
-          >
+                <p className="logo">Logo</p>
+                <p className="text">Enter your credentials to access your account</p></div>
+                <form className="login-data"
+                onSubmit={handleSubmit}
+                 >
           
-           <input
-           className="userdata"
-           name="userid"
-        //    type={"email"}
-           required
-           placeholder="User ID"
-           onChange={(e)=>{setInput({...input,userid:e.target.value})}}
-           />
+                <input className="userdata"  name="userid"
+                //    type={"email"}
+                required
+                placeholder="User ID"
+                onChange={(e)=>{setInput({...input,userid:e.target.value})}}
+                />
 
 
            <input 

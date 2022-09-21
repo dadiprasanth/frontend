@@ -1,6 +1,6 @@
 const General=(props)=>{
     return(
-        <form>
+        <form className="form-addprop">
             <div>
             <label >Name</label><br></br>
             <input type="text" placeholder="Owner" value={props.form.name} onChange={(e)=>props.setform({...props.form,name:e.target.value})}/>
