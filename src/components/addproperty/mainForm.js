@@ -9,7 +9,7 @@ function MainForm() {
   const[count,setcount]=useState(0)
   const[form,setform]=useState({
     propertyType:"",
-    negotable:"",
+    negotiable:"",
     price:"",
     ownerShip:"",
     propertyAge:"",
