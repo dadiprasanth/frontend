@@ -9,9 +9,6 @@ function App() {
   
   return (
 
-     
-     /* //place your routing elements here  u can see if i add routoing here i will give this part*/
-    
   <BrowserRouter>
     <Routes>
     <Route path="/" element={<Register/>}/>
