@@ -9,7 +9,7 @@ const Table = (props) => {
   }
   return (
     <>
-    <table className='table'>
+    <table>
       <tbody>
         <tr className="table-row">
             <th className='first-td'>PPD ID</th>
@@ -22,21 +22,20 @@ const Table = (props) => {
             <th className='td'>Days Left</th>
             <th className='last-td'>Action</th>
         </tr>
-        
         {
           data.map((item)=>{
             return (
               <>
               <tr key={item.PPDID} className="table-row"> 
               <td className='first-td'>{item.PPDID}</td>
-              <td className='td'><i className='far fa-images'></i></td>
+              <td className='td' id='Image'><i className='far fa-images'></i></td>
               <td className='td'>{item.propertyType}</td>
               <td className='td'>{item.mobile}</td>
               <td className='td'>{item.toatalArea}</td>
               <td className='td'>{item.views}</td>
-              <td onClick={changeStatus} className='td'>{item.status}</td>
+              <td onClick={changeStatus} className='td' id='status-font'>{item.status}</td>
               <td className='td'>{item.days}</td>
-              <td className='last-td'><i className="fa fa-eye"> </i><i className="fa fa-edit" style={{marginLeft :"10px"}}></i></td>
+              <td className='last-td' id='Action'><i className="fa fa-eye"> </i><i className="fa fa-edit" style={{marginLeft :"10px"}}></i></td>
               </tr>
               </>
             ) 

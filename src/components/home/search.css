@@ -1,10 +1,12 @@
 .search-body{
     width: 100%;
-    height: 100%;
+    height: 90%;
     margin-top:10px;
-    background-color:#F5F5F5;
+    background-color:#F5F5F5; 
 }
-
+#search-child{
+    height: 740px;
+}
 .searchBox{
     height: 80px;
 }
@@ -47,18 +49,22 @@
 }
 
 .table-container{
-    width: 90%;
-    height: 70%;
+    width: 95%;
+    height: 78%;
     margin: auto;
-    background-color: #F5F5F5;
-    margin-top: 30px;
+    background-color:  #F5F5F5;
+    margin-top: 20px;
     overflow-y: auto;
     margin-bottom: 30px;
+    
+    border-radius: 2px;
+    box-sizing: border-box;
     
 }
 
 ::-webkit-scrollbar {
     width: 15px;
+    border-radius: 15px;
   }
   ::-webkit-scrollbar-thumb {
     background: #E1F9F4; 
