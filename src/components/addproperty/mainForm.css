@@ -44,15 +44,24 @@
     background:#fafbfc;
     justify-content: space-between;
     padding:20px;
+    padding-bottom: 0px;
     color:#AAAAAA;
   
     font-family: 'Source Sans Pro';
+  }
+  .headerid{
+    margin-bottom: 30px;
   }
   .pop{
     border:1px solid #E1F9F4;
     text-align: center;
     background-color: #E1F9F4;
     border-radius: 10px;
+    
+  }
+  #pop{
+    margin:5px;
+    
   }
   /*----------------------strip---------------------------*/
   .strip{

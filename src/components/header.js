@@ -6,11 +6,11 @@ const Header=()=>{
     const popfun=()=>{
         if(!pop){
             return(
-                <><i class="fa fa-arrow-down" aria-hidden="true"></i></>
+                <><i id="pop" class="fa fa-arrow-down" aria-hidden="true"></i></>
             )
         }else{
             return(
-                <><i class="fa fa-arrow-up" aria-hidden="true"></i>
+                <><i id="pop"class="fa fa-arrow-up" aria-hidden="true"></i>
                 <div class="pop" onClick={()=>nav("/login")}>logout</div>
                 </>
             )
@@ -20,7 +20,7 @@ const Header=()=>{
     return(
         <div className="top">
         <header>
-            <div>userid :06PPD125</div>
+            <div className="headerid">userid :06PPD125</div>
             <div>
             <div>
                 <span onClick={()=>setpop(!pop)}><i class="fa-solid fa-user"></i> UserName 
