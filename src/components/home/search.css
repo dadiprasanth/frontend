@@ -2,11 +2,11 @@
     width: 100%;
     height: 90%;
     margin-top:10px;
-    background-color:#F5F5F5; 
+    
 }
-#search-child{
+/* #search-child{
     height: 740px;
-}
+} */
 .searchBox{
     height: 80px;
 }
@@ -50,15 +50,16 @@
 
 .table-container{
     width: 95%;
-    height: 78%;
+    /* height: 78%; */
     margin: auto;
-    background-color:  #F5F5F5;
+    height:52vh;
     margin-top: 20px;
-    overflow-y: auto;
+    overflow: auto;
     margin-bottom: 30px;
     
     border-radius: 2px;
     box-sizing: border-box;
+    
     
 }
 
