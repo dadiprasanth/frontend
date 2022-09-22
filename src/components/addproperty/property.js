@@ -15,7 +15,7 @@ const Property=(props)=>{
         </div>
         <div>
         <label >Area Unit</label><br></br>
-        <input required type="text" placeholder="Area Unit" value={props.form.areaUnit} onChange={(e)=>props.setform({...props.form,areaUnit:e.target.value})}/>
+        <input type={"text"}  required placeholder="Area Unit" value={props.form.areaUnit} onChange={(e)=>props.setform({...props.form,areaUnit:e.target.value})}/>
         </div>
         <div>
         <label >No of BHK</label><br></br>

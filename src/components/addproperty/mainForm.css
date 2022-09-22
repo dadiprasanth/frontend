@@ -162,7 +162,7 @@
   
   }
   .body{
-    height:50vh;
+    height:54vh;
     overflow: scroll;
     overflow-x: hidden; 
     
@@ -205,13 +205,45 @@
       font-weight: 500;
       font-size: small;
     }
+    select {
+      color:gray;
+    }
+    #camera{
+      
+      margin-left: -150px;
+      margin-top: 35px;
+      
+    }
+    #camera span{
+      font-size: small;
+    }
+    #facam{
+      font-size: 50px;
+       
+      color:white;
+      display: flex;
+      text-align: center;
+      height:70px;
+      width:70px;
+      border-radius: 45px;
+      background-color: #6AB4F8;
+      justify-content: center;
+      
+      align-items: center;
+    }
+    .camupload input{
+      /* width:100px; */
+      height:30px;
+      background-color: #fafbfc;
+      
+    }
     /*----------------------------button---------------*/
     .bottom button{
       width:200px;
       border-radius:10px;
       border:1px;
       height:30px;
-     
+      box-shadow: -5px 10px 18px #888888;
       margin:10px;
       color:#E1F9F4;
     }

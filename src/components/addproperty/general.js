@@ -1,4 +1,38 @@
+import {useState} from "react"
 const General=(props)=>{
+    const[type,settype]=useState(true)
+    // const file=(e)=>{
+    //     e.preventDefault()
+    //     settype(!type)
+    // }
+    const upload=()=>{
+        if(type){
+        return(
+            <>
+              <div id="camera" onClick={()=>settype(!type)}>
+                
+                <span>Add photo</span>
+                <i id="facam" className="fa-solid fa-camera"></i>
+                
+            
+                </div>
+            </>
+        )}
+        else{
+            return(
+                <>
+                
+                                      
+                <input type="file"/>
+                <br></br>
+                <input type="submit" onClick={()=>settype(!type)}/>
+               
+              
+            </>
+
+            )
+        }
+    }
     return(
         <form className="form-addprop">
             <div>
@@ -7,7 +41,7 @@ const General=(props)=>{
             </div>
             <div>
             <label >Mobile</label><br></br>
-            <input  required type="text" placeholder="Enter Mobile Number" value={props.form.mobile} onChange={(e)=>props.setform({...props.form,mobile:e.target.value})}/>
+            <input   type={"text"}  required placeholder="Enter Mobile Number" value={props.form.mobile} onChange={(e)=>props.setform({...props.form,mobile:e.target.value})}/>
             </div>
             <div>
             <label >Posted By</label><br></br>
@@ -40,6 +74,10 @@ const General=(props)=>{
 
             </select>
             </div>
+            <div className="camupload">
+                {upload()}
+            </div>
+          
             
             
                     

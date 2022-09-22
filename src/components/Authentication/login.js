@@ -22,8 +22,22 @@ const Login=()=>{
     let nav=useNavigate()
     const handleSubmit=(e)=>{
         e.preventDefault()
-        console.log(input)
-       nav("/property")
+        fetch ("http://localhost:8080/users/login",{
+            method:"POST",
+            headers:{
+              "Accept":"application/json",
+              "Content-Type":"application/json"
+            },
+            body:JSON.stringify(input)
+          }).then((data)=>data.json())
+          .then((response)=>{if(response.status==="Success"){
+            nav("/property")
+
+        }
+        alert(response.message)
+          })
+               console.log(input)
+        
     }
     return(
         <>
