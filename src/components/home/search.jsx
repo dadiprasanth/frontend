@@ -1,14 +1,34 @@
 import React from 'react'
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import Table from './table';
-import data from './new';
+
 import {Link} from 'react-router-dom'
 import "./search.css"
 
 const Search = () => {
 
-    const [query , setQuery] = useState("")
-    const info = data.filter(data=> data.PPDID.toLowerCase().includes(query))
+    // const [query , setQuery] = useState("")
+    // const info = data.filter(data=> data.PPDID.toLowerCase().includes(query))
+    
+  
+      const [query , setQuery] = useState("")
+      const [propdata , setPropdata] = useState([456,455])
+      const info = propdata.filter(data => data.PPDID.toLowerCase().includes(query));
+  
+      useEffect(()=>{
+        fetch('http://localhost:8080/property',{
+          method:"GET",
+          headers: {
+          'Content-Type': 'application/json',
+          'Accept':'application/json'
+          }
+        }).then((data)=> data.json())
+        .then(data=>  setPropdata(data)
+        )
+        console.log(propdata)
+      },[])
+      
+    // console.log(propdata)
   return (
     <>
     <div className='bigcontainer'>
