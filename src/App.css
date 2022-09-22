@@ -1,17 +1,18 @@
 .bigcontainer{
-    margin-top:10px;
+    margin-top:5px;
     padding: 30px;
-    background-color: #F5F5F5;
+    background:#fafbfc;
     
 }
 #bigcon{
-    color:#ccc
+    color:#ccc;
+    
 }
 
 .property{
     display:flex;
 
-    
+    background: #E1F9F4; 
 }
 .child1{
     width:20%;
@@ -19,7 +20,7 @@
 .child2{
     width:80%;
    
-    background: #E1F9F4; 
+    
 }
 input:focus{
     outline: none;

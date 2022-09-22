@@ -5,7 +5,7 @@ const Basic=(props)=>{
         <form className="form-addprop">
             <div>
             <label >Property Type</label><br></br>
-            <select name="propertyType" placeholder="Select Property Type" value={props.form.propertyType} onChange={(e)=>props.setform({...props.form,propertyType:e.target.value})}>
+            <select required name="propertyType"  placeholder="Select Property Type" value={props.form.propertyType} onChange={(e)=>props.setform({...props.form,propertyType:e.target.value})}>
             <option value="" disabled selected>Select Property Type</option>
             <option value="house">House</option>
             <option value="apartment">Apartment</option>
@@ -57,7 +57,7 @@ const Basic=(props)=>{
             </div>
             <div>
             <label >Property Description</label><br></br>
-            <input type="text" placeholder="" value={props.form.propertyDescription} onChange={(e)=>props.setform({...props.form,propertyDescription:e.target.value})}/>
+            <input type="text" required placeholder="" value={props.form.propertyDescription} onChange={(e)=>props.setform({...props.form,propertyDescription:e.target.value})}/>
             </div>
             <div>
             <label >Bank Loan</label><br></br>

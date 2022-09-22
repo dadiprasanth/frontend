@@ -1,7 +1,7 @@
 const Sidebar=()=>{
     return(
         <div className="sidebar">
-            <h2>Logo</h2>
+            <div className="sidebar-logo"><i class="fa-solid fa-city"><span>Estate</span></i></div>
             <ul id="sidebarlist">
                 <li><i class="fa-solid fa-house-chimney"></i> Property</li>
                 <li><i class="fa-solid fa-bell"></i> Assistance</li>

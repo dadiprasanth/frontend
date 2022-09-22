@@ -7,7 +7,7 @@ const General=(props)=>{
             </div>
             <div>
             <label >Mobile</label><br></br>
-            <input type="text" placeholder="Enter Mobile Number" value={props.form.mobile} onChange={(e)=>props.setform({...props.form,mobile:e.target.value})}/>
+            <input  required type="text" placeholder="Enter Mobile Number" value={props.form.mobile} onChange={(e)=>props.setform({...props.form,mobile:e.target.value})}/>
             </div>
             <div>
             <label >Posted By</label><br></br>

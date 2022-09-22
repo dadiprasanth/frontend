@@ -1,13 +1,22 @@
 import "./mainForm.css"
 import { useState } from 'react';
-
+import { useNavigate } from "react-router-dom";
 import General from './general';
 import Property from './property';
 import Location from './location';
 import Basic from './basic';
 function MainForm() {
+  let months={Jan:"01",Fed:"02",Mar:"03",Apr:"04",May:"05",Jun:"06",Juy:"07",Aug:"08",Sep:"09",Oct:"10",Nov:"11",Dec:"12"};
+  let date=Date(Date.now());
+  let arr=date.toString().split(" ").slice(1,5)
+  let str=arr[1]+"/"+months[arr[0]]+"/"+arr[2]+" "+arr[3]
+  const nav=useNavigate()
   const[count,setcount]=useState(0)
   const[form,setform]=useState({
+    views:Math.floor((Math.random())*1000),
+    days:Math.floor((Math.random())*100),
+    status:"unsold",
+    date:str,
     propertyType:"",
     negotiable:"",
     price:"",
@@ -44,7 +53,7 @@ function MainForm() {
     latitude:"",
     longitude:""
   })
-  const headers=["basicinfo","personaldetails","generaldetail","Locationdetails"]
+  
   const pagedisplay=()=>{
     if(count==0){
       return(
@@ -64,6 +73,18 @@ function MainForm() {
       )
     }
   }
+  const postfun=()=>{
+    fetch("http://localhost:8080/property/add",{
+      method:"POST",
+      body:JSON.stringify(form),
+      headers:{
+        "Accept":"application/json",
+        "Content-Type":"application/json"
+      }
+    }).then(x=>x.json()).then(data=>alert(data.message))
+    console.log(form)
+    nav("/property")
+  }
   return(
     <div id="bigcon" className="bigcontainer"><div>Add New Property</div>
       <div id={"hi"+count}className="strip">
@@ -79,16 +100,17 @@ function MainForm() {
       <div className='bottom'>
         <button id="bt1"onClick={()=>{
           if(count==0){
-            console.log(form)
-            alert("cancel event")
+            
+            alert("i am not willing to add")
+            nav("/property")
           }
           else{
             setcount(count-1)}
           }}>{count==0?"Cancel":"Previous"}</button>
         <button id="bt2" onClick={()=>{
             if(count==3){
-              console.log(form)
-              alert("form submittes")
+              postfun()
+              
             }
             else{
               setcount(count+1)}

@@ -11,6 +11,7 @@ const Search = () => {
     const info = data.filter(data=> data.PPDID.toLowerCase().includes(query))
   return (
     <>
+    <div className='bigcontainer'>
      <div className='search-body'>
               <div className='searchBox'>
                 <form className='form'>
@@ -28,6 +29,7 @@ const Search = () => {
             <div className='table-container'>
             <Table data={info}/>
             </div>
+      </div>
       </div>   
     </>
   )

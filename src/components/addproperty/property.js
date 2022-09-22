@@ -11,11 +11,11 @@ const Property=(props)=>{
         </div>
         <div>
         <label >Toatal Area</label><br></br>
-        <input type="text" placeholder="Example: 7500 " value={props.form.toatalArea} onChange={(e)=>props.setform({...props.form,toatalArea:e.target.value})}/>
+        <input required type="text" placeholder="Example: 7500 " value={props.form.toatalArea} onChange={(e)=>props.setform({...props.form,toatalArea:e.target.value})}/>
         </div>
         <div>
         <label >Area Unit</label><br></br>
-        <input type="text" placeholder="Area Unit" value={props.form.areaUnit} onChange={(e)=>props.setform({...props.form,areaUnit:e.target.value})}/>
+        <input required type="text" placeholder="Area Unit" value={props.form.areaUnit} onChange={(e)=>props.setform({...props.form,areaUnit:e.target.value})}/>
         </div>
         <div>
         <label >No of BHK</label><br></br>
