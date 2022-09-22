@@ -27,6 +27,7 @@ const Login=()=>{
     }
     return(
         <>
+        <div className="cover">
         <div className="login-form">
             <div>
                 <div className="login-logo"><i class="fa-solid fa-city"></i></div>
@@ -34,8 +35,6 @@ const Login=()=>{
             </div>
             <form className="login-data" onSubmit={handleSubmit} >
           
-
-                <input className="userdata"  name="userid"  required  placeholder="User ID" onChange={(e)=>{setInput({...input,userid:e.target.value})}} />
 
                 <input className="userdata"  name="userid"
                   type={"email"}
@@ -53,6 +52,7 @@ const Login=()=>{
 
           </form>
          
+        </div>
         </div>
 
         </>

@@ -6,6 +6,11 @@
 .login-logo{
     margin:10px;
 }
+.cover{
+    background-color: #e1f9f4;
+    padding:20px;
+    height: 93vh;
+}
 .login-data{
     display:flex;
     flex-flow:column;
@@ -22,12 +27,13 @@
 .login-form{
     text-align: center;
     width:40vw;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: auto;
     margin-right: auto;
     margin-left: auto;
     background-color: #ffff;
     border-radius: 20px;
+    padding: 20px;
     
 }
 .login-form >div{
@@ -48,7 +54,7 @@ font-weight: 400;}
     opacity: 60%;
 }
 .login-data button{
-    padding: 20px;
+    padding: 10px;
     margin: 20px;
     border: 1px solid #e2e2e2;
     border-radius: 5px;

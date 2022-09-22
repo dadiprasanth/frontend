@@ -66,14 +66,15 @@ function MainForm() {
     }
   }
   const postfun=()=>{
-    fetch("http://localhost:8080/property/add",{
-      method:"POST",
-      body:JSON.stringify(form),
-      headers:{
-        "Accept":"application/json",
-        "Content-Type":"application/json"
-      }
-    }).then(x=>x.json()).then(data=>alert(data.message))
+    // fetch("http://localhost:8080/property/add",{
+    //   method:"POST",
+    //   body:JSON.stringify(form),
+    //   headers:{
+    //     "Accept":"application/json",
+    //     "Content-Type":"application/json"
+    //   }
+    // }).then(x=>x.json()).then(data=>alert(data.message))
+    console.log(form)
     nav("/property")
   }
   return(

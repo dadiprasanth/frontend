@@ -38,6 +38,7 @@ if(form.password===password){
   }
     return(
         <>
+        <div className="cover">
          <div className="register-form">
             <div className="register-header">
             <div className="login-logo"><i class="fa-solid fa-city"></i></div>
@@ -73,7 +74,8 @@ onSubmit={handlesubmit}>
 
           <button type="submit">Sign Up</button>
   
-</form>
+      </form>
+        </div>
         </div>
          
         </>
