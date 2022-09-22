@@ -7,15 +7,16 @@ import "./register.css"
 const Register=()=>{
 
   let nav=useNavigate()
-const [password,setPassowrd]=useState("")
-const [form,setform]=useState({
+  const [password,setPassowrd]=useState("")
+  const [form,setform]=useState({
   MailID:"",
   password:"",
-})
-var handlesubmit=0
-if(form.password===password){
- handlesubmit=(e)=>{
+        })
+// var handlesubmit=0
+
+ const handlesubmit=(e)=>{
   e.preventDefault()
+  if(form.password===password){
   console.log(form)
   
  
@@ -27,15 +28,19 @@ if(form.password===password){
     },
     body:JSON.stringify(form)
   }).then((data)=>data.json())
-  .then((response)=>alert(JSON.stringify(response)))
+  .then((response)=>alert(JSON.stringify(response.message)))
   nav("/login")
-  }}
-  else{
-    handlesubmit=(e)=>{
-      e.preventDefault()
-      alert("password doesnt match")
-    }
   }
+  else{
+    alert("password doesnt match")
+  }
+}
+  // else{
+  //   handlesubmit=(e)=>{
+  //     e.preventDefault()
+  //     alert("password doesnt match")
+  //   }
+  // }
     return(
         <>
         <div className="cover">
@@ -46,9 +51,9 @@ if(form.password===password){
           <div className="text">Create New Account</div>
           </div>
 
-          <form className="register-data"
+          <form className="register-data" onSubmit={handlesubmit}>
           
-onSubmit={handlesubmit}>
+                                              
            <input  name="MailID"
            type={"email"}
            placeholder="MailID"
@@ -66,6 +71,7 @@ onSubmit={handlesubmit}>
              />
         <input name="confirmpassword"
              placeholder="ConfirmPassword"
+             type="password"
            value={password}
              required
              onChange={(e)=>{setPassowrd(e.target.value)}}

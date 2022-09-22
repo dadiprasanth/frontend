@@ -47,7 +47,7 @@ const Login=()=>{
 
 
 
-           <input  required  placeholder="Password" onChange={(e)=>{setInput({...input,password:e.target.value})}}           />
+           <input  required type="password" placeholder="Password" onChange={(e)=>{setInput({...input,password:e.target.value})}}           />
 
 
             <button type="sumbit">Sign In</button>
