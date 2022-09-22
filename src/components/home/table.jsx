@@ -5,7 +5,10 @@ const Table = (props) => {
   const changeStatus = async(e)=>{
    const property_id= e.target.parentElement.children[0].innerText ;
    const undate = {ppdid:property_id}
-
+   if (e.target.innerText === "Sold"){
+    alert('property not available to sell')
+   }else{
+       
   await fetch("http://localhost:8080/property",{
     method:"PUT",
     body:JSON.stringify(undate),
@@ -15,6 +18,8 @@ const Table = (props) => {
     }
   }).then(x=>x.json()).then(data=>alert(data.message)); 
   e.target.innerText= "Sold"
+   }
+
   }
   return (
     <>
