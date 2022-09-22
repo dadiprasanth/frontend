@@ -1,14 +1,12 @@
-import React from 'react'
 import {useState} from 'react'
 import Table from './table';
-import data from './new';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import "./search.css"
 
-const Search = () => {
-
+const Search = (props) => {
+    const data = props.data;
     const [query , setQuery] = useState("")
-    const info = data.filter(data=> data.PPDID.toLowerCase().includes(query))
+    const info = data.filter(data => data.ppdid.toLowerCase().includes(query));
   return (
     <>
     <div className='bigcontainer'>
