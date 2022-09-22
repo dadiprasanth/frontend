@@ -5,6 +5,11 @@
   
   background-color: #E1F9F4
   }
+  .sidebar-logo span{
+    font-style: italic;
+    font-size: medium;
+    font-family: Cursive;
+}
   .sidebar h2{
     text-align:center
   }

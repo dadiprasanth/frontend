@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate} from "react-router-dom";
+import { useNavigate,Link} from "react-router-dom";
 import {useState} from "react";
 
 import "./register.css"
@@ -41,8 +41,9 @@ if(form.password===password){
         <div className="cover">
          <div className="register-form">
             <div className="register-header">
-            <div className="login-logo"><i class="fa-solid fa-city"></i></div>
-          <p className="text">Create New Account</p>
+            <div className="login-logo"><i class="fa-solid fa-city"><span>Estate</span></i></div>
+            <h4>Register</h4>
+          <div className="text">Create New Account</div>
           </div>
 
           <form className="register-data"
@@ -73,6 +74,7 @@ onSubmit={handlesubmit}>
              />
 
           <button type="submit">Sign Up</button>
+          Have an account?<Link to="/login">Login now</Link> 
   
       </form>
         </div>

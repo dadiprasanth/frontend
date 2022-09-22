@@ -6,9 +6,17 @@ import Property from './property';
 import Location from './location';
 import Basic from './basic';
 function MainForm() {
+  let months={Jan:"01",Fed:"02",Mar:"03",Apr:"04",May:"05",Jun:"06",Juy:"07",Aug:"08",Sep:"09",Oct:"10",Nov:"11",Dec:"12"};
+  let date=Date(Date.now());
+  let arr=date.toString().split(" ").slice(1,5)
+  let str=arr[1]+"/"+months[arr[0]]+"/"+arr[2]+" "+arr[3]
   const nav=useNavigate()
   const[count,setcount]=useState(0)
   const[form,setform]=useState({
+    views:Math.floor((Math.random())*1000),
+    days:Math.floor((Math.random())*100),
+    status:"unsold",
+    date:str,
     propertyType:"",
     negotiable:"",
     price:"",
@@ -66,14 +74,14 @@ function MainForm() {
     }
   }
   const postfun=()=>{
-    // fetch("http://localhost:8080/property/add",{
-    //   method:"POST",
-    //   body:JSON.stringify(form),
-    //   headers:{
-    //     "Accept":"application/json",
-    //     "Content-Type":"application/json"
-    //   }
-    // }).then(x=>x.json()).then(data=>alert(data.message))
+    fetch("http://localhost:8080/property/add",{
+      method:"POST",
+      body:JSON.stringify(form),
+      headers:{
+        "Accept":"application/json",
+        "Content-Type":"application/json"
+      }
+    }).then(x=>x.json()).then(data=>alert(data.message))
     console.log(form)
     nav("/property")
   }

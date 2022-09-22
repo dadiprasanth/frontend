@@ -5,18 +5,20 @@
 } */
 .register-form{
     text-align: center;
-    width:40vw;
+    width:30vw;
     margin-top: 30px;
     margin-bottom: auto;
     margin-right: auto;
     margin-left: auto;
     padding: 20px;
+    padding-bottom: 0px;
     background-color: #ffff;
     border-radius: 20px;
     box-sizing: border-box;
 }
 .register-header{
     padding:20px;
+    padding-bottom: 0px;
 }
 .text{
 color:
@@ -30,7 +32,7 @@ font-weight: 400;
     width:auto;
     /* height: auto; */
     background-color: #ffff;
-    padding: 20px;
+    /* padding: 20px; */
 justify-content: space-evenly;
 
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react"
 // import { Icon } from 'react-icons-kit';
 // import {eyeOff} from 'react-icons-kit/feather/eyeOff';
 // import {eye} from 'react-icons-kit/feather/eye';
- import { useNavigate } from "react-router-dom";
+ import { Link, useNavigate } from "react-router-dom";
 import "./login.css"
 const Login=()=>{
     const [input,setInput]=useState("")
@@ -30,8 +30,10 @@ const Login=()=>{
         <div className="cover">
         <div className="login-form">
             <div>
-                <div className="login-logo"><i class="fa-solid fa-city"></i></div>
-                <p className="text">Enter your credentials to access your account</p>
+                <div className="login-logo"><i class="fa-solid fa-city"><span>Estate</span></i></div>
+        
+                <h4>Login Here</h4>
+                <div className="text">Enter your credentials to access your account</div>
             </div>
             <form className="login-data" onSubmit={handleSubmit} >
           
@@ -49,6 +51,7 @@ const Login=()=>{
 
 
             <button type="sumbit">Sign In</button>
+            Don't have an account?<Link to="/">Sign Up</Link> 
 
           </form>
          
