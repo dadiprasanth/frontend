@@ -34,6 +34,7 @@
     filter:drop-shadow( 0px 10px 25px rgba(0, 0, 0, 0.13));
     
   }
+  
   /*---------------------------header css  -----------------------*/
   header{
     display:flex;
@@ -46,6 +47,12 @@
     color:#AAAAAA;
   
     font-family: 'Source Sans Pro';
+  }
+  .pop{
+    border:1px solid #E1F9F4;
+    text-align: center;
+    background-color: #E1F9F4;
+    border-radius: 10px;
   }
   /*----------------------strip---------------------------*/
   .strip{
@@ -190,7 +197,7 @@
       border-radius:10px;
       border:1px;
       height:30px;
-      box-shadow: -5px 10px 18px #888888;
+     
       margin:10px;
       color:#E1F9F4;
     }
