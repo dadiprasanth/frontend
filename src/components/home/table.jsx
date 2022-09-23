@@ -18,7 +18,8 @@ const Table = (props) => {
       "Authorization":token
     }
   }).then(x=>x.json()).then(data=>alert(data.message)); 
-  e.target.innerText= "Sold"
+  e.target.innerText= "Sold";
+  e.target.parentElement.children[0].innerText= "0"
    }
 
   }
