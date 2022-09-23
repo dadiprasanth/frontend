@@ -28,8 +28,8 @@ const Register=()=>{
     },
     body:JSON.stringify(form)
   }).then((data)=>data.json())
-  .then((response)=>alert(JSON.stringify(response.message)))
-  nav("/login")
+  .then((response)=>alert(response.message))
+  nav("/login") 
   }
   else{
     alert("password doesnt match")

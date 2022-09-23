@@ -6,7 +6,7 @@ import "./search.css"
 const Search = (props) => {
     const data = props.data;
     const [query , setQuery] = useState("")
-    const info = data.filter(data => data.ppdid.toLowerCase().includes(""));
+    // const info = data.filter(data => data.ppdid.toLowerCase().includes(""));
 
   return (
     <>
@@ -26,7 +26,7 @@ const Search = (props) => {
                 </form>
             </div>
             <div className='table-container'>
-            <Table data={info}/>
+            <Table data={data}/>
             </div>
       </div>
       </div>   

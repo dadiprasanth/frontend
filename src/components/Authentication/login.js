@@ -4,7 +4,9 @@ import React, { useState } from "react"
 // import {eye} from 'react-icons-kit/feather/eye';
  import { Link, useNavigate } from "react-router-dom";
 import "./login.css"
-const Login=()=>{
+const Login=(props)=>{
+    const {token,settoken}=props;
+    settoken("")
     const [input,setInput]=useState("")
     // const [type,settype]=useState("password")
     // const [icon,setIcon]=useState(eyeOff)
@@ -31,6 +33,7 @@ const Login=()=>{
             body:JSON.stringify(input)
           }).then((data)=>data.json())
           .then((response)=>{if(response.status==="Success"){
+            settoken(response.token)
             nav("/property")
 
         }

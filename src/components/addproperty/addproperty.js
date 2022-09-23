@@ -1,7 +1,8 @@
 import Sidebar from "../sidebar"
 import Header from "../header"
 import MainForm from "./mainForm"
-const Addproperty=()=>{
+const Addproperty=(props)=>{
+    const {token,settoken}=props
     return(
         <>
         <div className='property'>
@@ -9,8 +10,8 @@ const Addproperty=()=>{
         <Sidebar/>
         </div>
         <div className='child2'>
-        <Header/>
-        <MainForm/>
+        <Header token={token} settoken={settoken}/>
+        <MainForm token={token} settoken={settoken}/>
         </div>
         </div>
         </>

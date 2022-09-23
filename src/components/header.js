@@ -1,7 +1,8 @@
 import { useState } from "react";
 import {useNavigate} from "react-router-dom"
-const Header=()=>{
+const Header=(props)=>{
     const nav=useNavigate()
+    const{token,settoken}=props
     const[pop,setpop]=useState(false)
     const popfun=()=>{
         if(!pop){
@@ -11,7 +12,7 @@ const Header=()=>{
         }else{
             return(
                 <><i id="pop"class="fa fa-arrow-up" aria-hidden="true"></i>
-                <div class="pop" onClick={()=>nav("/login")}>logout</div>
+                <div class="pop" onClick={()=>{settoken("");nav("/login")}}>logout</div>
                 </>
             )
 

@@ -2,15 +2,17 @@ import Search from "./search"
 import Sidebar from "../../components/sidebar"
 import Header from "../../components/header"
 import { useState , useEffect} from "react"
-const Home =()=>{
+const Home =(props)=>{
     const [data , setData] = useState([]);
-
+    const {token,settoken}=props;
+    console.log(token)
     useEffect(()=>{
         fetch('http://localhost:8080/property',{
          method:"GET",
           headers: {
            'Content-Type': 'application/json',
-            'Accept':'application/json'
+            'Accept':'application/json',
+            "Authorization":token
            }
         }).then((data)=> data.json())
         .then((money)=> setData(money)
@@ -23,7 +25,7 @@ const Home =()=>{
         <Sidebar/>
         </div>
         <div className='child2' id="search-child">
-        <Header/>
+        <Header token={token} settoken={settoken}/>
         <Search data = {data}/>
         </div>
         </div>
