@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './table.css'
 const Table = (props) => {
-   const {data}=props ;
+   const {data,token}=props ;
   const changeStatus = async(e)=>{
    const property_id= e.target.parentElement.children[0].innerText ;
    const undate = {ppdid:property_id}
@@ -14,7 +14,8 @@ const Table = (props) => {
     body:JSON.stringify(undate),
     headers:{
       "Accept":"application/json",
-      "Content-Type":"application/json"
+      "Content-Type":"application/json",
+      "Authorization":token
     }
   }).then(x=>x.json()).then(data=>alert(data.message)); 
   e.target.innerText= "Sold"

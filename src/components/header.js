@@ -2,7 +2,7 @@ import { useState } from "react";
 import {useNavigate} from "react-router-dom"
 const Header=(props)=>{
     const nav=useNavigate()
-    const{token,settoken}=props
+    const{token,settoken,id,setid,name}=props
     const[pop,setpop]=useState(false)
     const popfun=()=>{
         if(!pop){
@@ -21,10 +21,10 @@ const Header=(props)=>{
     return(
         <div className="top">
         <header>
-            <div className="headerid">userid :06PPD125</div>
+            <div className="headerid">userid :{id}</div>
             <div>
             <div>
-                <span onClick={()=>setpop(!pop)}><i class="fa-solid fa-user"></i> UserName 
+                <span onClick={()=>setpop(!pop)}><i class="fa-solid fa-user"></i> {name} 
                  <span>{popfun()}</span>
                 </span>
             </div>

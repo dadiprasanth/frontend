@@ -4,7 +4,7 @@ import Header from "../../components/header"
 import { useState , useEffect} from "react"
 const Home =(props)=>{
     const [data , setData] = useState([]);
-    const {token,settoken}=props;
+    const {token,settoken,id,setid,name}=props;
     console.log(token)
     useEffect(()=>{
         fetch('http://localhost:8080/property',{
@@ -25,8 +25,8 @@ const Home =(props)=>{
         <Sidebar/>
         </div>
         <div className='child2' id="search-child">
-        <Header token={token} settoken={settoken}/>
-        <Search data = {data}/>
+        <Header token={token} settoken={settoken} id={id} setid={setid} name={name}/>
+        <Search data = {data} token={token}/>
         </div>
         </div>
         </>

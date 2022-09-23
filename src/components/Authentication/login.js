@@ -5,7 +5,7 @@ import React, { useState } from "react"
  import { Link, useNavigate } from "react-router-dom";
 import "./login.css"
 const Login=(props)=>{
-    const {token,settoken}=props;
+    const {token,settoken,id,setid,name,setname}=props;
     settoken("")
     const [input,setInput]=useState("")
     // const [type,settype]=useState("password")
@@ -34,12 +34,14 @@ const Login=(props)=>{
           }).then((data)=>data.json())
           .then((response)=>{if(response.status==="Success"){
             settoken(response.token)
+            setid(response.id)
+            setname(input.userid)
             nav("/property")
 
-        }
-        alert(response.message)
+        }else{
+        alert(response.message)}
           })
-               console.log(input)
+               //console.log(input)
         
     }
     return(
