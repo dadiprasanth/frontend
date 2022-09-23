@@ -5,7 +5,7 @@ import { useState , useEffect} from "react"
 const Home =(props)=>{
     const [data , setData] = useState([]);
     const {token,settoken,id,setid,name}=props;
-    console.log(token)
+ 
     useEffect(()=>{
         fetch('http://localhost:8080/property',{
          method:"GET",
