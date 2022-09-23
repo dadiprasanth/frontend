@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+
 import './table.css'
 const Table = (props) => {
    const {data,token}=props ;
@@ -19,7 +19,7 @@ const Table = (props) => {
     }
   }).then(x=>x.json()).then(data=>alert(data.message)); 
   e.target.innerText= "Sold";
-  e.target.parentElement.children[0].innerText= "0"
+  e.target.parentElement.children[7].innerText= "0"
    }
 
   }
