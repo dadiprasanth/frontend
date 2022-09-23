@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+
 import './table.css'
 const Table = (props) => {
    const {data}=props ;
