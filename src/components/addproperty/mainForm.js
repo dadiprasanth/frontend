@@ -40,7 +40,7 @@ function MainForm(props) {
     electricity:"",
     facing:"",
     name:"",
-    mobile:"",
+    // mobile:"",
     postedBy:"",
     saleType:"",
     featuredPackage:"",
@@ -84,9 +84,16 @@ function MainForm(props) {
         "Content-Type":"application/json",
         "Authorization":token
       }
-    }).then(x=>x.json()).then(data=>alert(data.message))
+    }).then(x=>x.json()).then(data=>{
+      if(data.message=="success"){ 
+        alert("Data Added successfully")
+        nav("/property")}else{
+          alert(data.message)
+        }
+      })
     console.log(form)
-    nav("/property")
+
+   
   }
   return(
     <div id="bigcon" className="bigcontainer"><div>Add New Property</div>

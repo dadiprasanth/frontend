@@ -4,9 +4,9 @@ import {Link} from 'react-router-dom';
 import "./search.css"
 
 const Search = (props) => {
-    const data = props.data;
+    const {data,token} = props;
     const [query , setQuery] = useState("")
-    // const info = data.filter(data => data.ppdid.toLowerCase().includes(""));
+     const info = data.filter(data => data.ppdid.toLowerCase().includes(""));
 
   return (
     <>
@@ -26,7 +26,7 @@ const Search = (props) => {
                 </form>
             </div>
             <div className='table-container'>
-            <Table data={data}/>
+            <Table data={info}token={token}/>
             </div>
       </div>
       </div>   
