@@ -6,7 +6,7 @@ import "./search.css"
 const Search = (props) => {
     const {data,token} = props;
     const [query , setQuery] = useState("")
-     const info = data.filter(data => data.ppdid.toLowerCase().includes(""));
+     const info = data.filter(data => data.ppdid.toLowerCase().includes(query));
 
   return (
     <>
