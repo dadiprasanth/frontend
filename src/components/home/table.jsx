@@ -17,7 +17,8 @@ const Table = (props) => {
       "Content-Type":"application/json"
     }
   }).then(x=>x.json()).then(data=>alert(data.message)); 
-  e.target.innerText= "Sold"
+  e.target.innerText= "Sold";
+  e.target.parentElement.children[0].innerText= "0"
    }
 
   }
