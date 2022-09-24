@@ -23,7 +23,7 @@ const General=(props)=>{
                 <>
                 
                                       
-                <input type="file"/>
+                <input type="file" name="file"/>
                 <br></br>
                 <input type="submit" onClick={()=>settype(!type)}/>
                

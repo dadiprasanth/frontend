@@ -18,53 +18,53 @@ function MainForm(props) {
     days:Math.floor((Math.random())*100),
     status:"unsold",
     date:str,
-    propertyType:"",
-    negotiable:"",
-    price:"",
-    ownerShip:"",
-    propertyAge:"",
-    propertyApproved:"",
-    propertyDescription:"",
-    bankLoan:"",
-    length:"",
-    breath:"",
-    toatalArea:"",
-    areaUnit:"",
-    noOfBhk:"",
-    noOfFloor:"",
-    attached:"",
-    westernToilet:"",
-    furnished:"",
-    carParking:"",
-    lift:"",
-    electricity:"",
-    facing:"",
-    name:"",
-    // mobile:"",
-    postedBy:"",
-    saleType:"",
-    featuredPackage:"",
-    ppdPackage:"",
-    email:"",
-    city:"",
-    area:"",
-    pincode:"",
-    address:"",
-    landMark:"",
-    latitude:"",
-    longitude:""
+    // // propertyType:"",
+    // negotiable:"",
+    // price:"",
+    // ownerShip:"",
+    // propertyAge:"",
+    // propertyApproved:"",
+    // propertyDescription:"",
+    // bankLoan:"",
+    // length:"",
+    // breath:"",
+    // toatalArea:"",
+    // areaUnit:"",
+    // noOfBhk:"",
+    // noOfFloor:"",
+    // attached:"",
+    // westernToilet:"",
+    // furnished:"",
+    // carParking:"",
+    // lift:"",
+    // electricity:"",
+    // facing:"",
+    // name:"",
+    // // mobile:"",
+    // postedBy:"",
+    // saleType:"",
+    // featuredPackage:"",
+    // ppdPackage:"",
+    // email:"",
+    // city:"",
+    // area:"",
+    // pincode:"",
+    // address:"",
+    // landMark:"",
+    // latitude:"",
+    // longitude:""
   })
   
   const pagedisplay=()=>{
-    if(count==0){
+    if(count===0){
       return(
         <Basic form={form} setform={setform}/>
       )
-    }else if(count==1){
+    }else if(count===1){
       return(
         <Property form={form} setform={setform}/>
       )
-    }else if(count==2){
+    }else if(count===2){
       return(
         <General form={form} setform={setform}/>
       )
@@ -74,8 +74,11 @@ function MainForm(props) {
       )
     }
   }
-  console.log(token)
+  //console.log(token)
   const postfun=()=>{
+    if(form.mobile===undefined||form.propertyType===undefined||form.toatalArea===undefined){
+      alert("mobile,toatalArea,property type is required")
+    }else{
     fetch("http://localhost:8080/property/add",{
       method:"POST",
       body:JSON.stringify(form),
@@ -85,7 +88,7 @@ function MainForm(props) {
         "Authorization":token
       }
     }).then(x=>x.json()).then(data=>{
-      if(data.message=="success"){ 
+      if(data.message==="success"){ 
         alert("Data Added successfully")
         nav("/property")}else{
           alert(data.message)
@@ -93,7 +96,7 @@ function MainForm(props) {
       })
     console.log(form)
 
-   
+    }
   }
   return(
     <div id="bigcon" className="bigcontainer"><div>Add New Property</div>
@@ -109,23 +112,24 @@ function MainForm(props) {
       <div className='body'>{pagedisplay()}</div>
       <div className='bottom'>
         <button id="bt1"onClick={()=>{
-          if(count==0){
+          if(count===0){
             
             alert("i am not willing to add")
             nav("/property")
           }
           else{
             setcount(count-1)}
-          }}>{count==0?"Cancel":"Previous"}</button>
+          }}>{count===0?"Cancel":"Previous"}</button>
         <button id="bt2" onClick={()=>{
-            if(count==3){
+            if(count===3){
+              
               postfun()
               
             }
             else{
               setcount(count+1)}
 
-        }}>{count==3?"Add Property":"Save&Continue"}</button>
+        }}>{count===3?"Add Property":"Save&Continue"}</button>
       </div>
       </div>
     </div>
