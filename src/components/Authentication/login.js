@@ -2,7 +2,7 @@ import React, { useState } from "react"
 // import { Icon } from 'react-icons-kit';
 // import {eyeOff} from 'react-icons-kit/feather/eyeOff';
 // import {eye} from 'react-icons-kit/feather/eye';
- import { Link, useNavigate } from "react-router-dom";
+ import { Link,useNavigate } from "react-router-dom";
 import "./login.css"
 const Login=(props)=>{
     const {token,settoken,id,setid,name,setname}=props;
